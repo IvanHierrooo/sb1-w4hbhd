@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" actionBarHidden="true">
+    <GridLayout rows="auto, *">
+        <!-- Barra de estado personalizada -->
+         <StackLayout row="0" style="background-color: #F5F5E9; height: 20;" />
+        <!-- Contenedor principal -->
+        <GridLayout row="1">
+            <WebView 
+                src="{{ webUrl }}" 
+                loaded="{{ onWebViewLoaded }}"
+                enableZoom="true"
+                displayZoomControls="false"
+                scrollBarIndicatorVisible="false" />
+            <ActivityIndicator 
+                busy="{{ isLoading }}" 
+                class="text-blue-500" 
+                width="50" 
+                height="50" />
+        </GridLayout>
+    </GridLayout>
+</Page>
